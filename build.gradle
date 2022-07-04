@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+}
+
+group 'com.nat'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.3.0'
+
+    // https://mvnrepository.com/artifact/com.aventstack/extentreports
+    implementation group: 'com.aventstack', name: 'extentreports', version: '5.0.9'
+
+    implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '5.2.1'
+
+    // https://mvnrepository.com/artifact/org.testng/testng
+    testImplementation group: 'org.testng', name: 'testng', version: '7.6.1'
+
+    // https://mvnrepository.com/artifact/org.assertj/assertj-core
+    testImplementation group: 'org.assertj', name: 'assertj-core', version: '3.23.1'
+
+    // https://mvnrepository.com/artifact/org.slf4j/slf4j-reload4j
+    testImplementation group: 'org.slf4j', name: 'slf4j-reload4j', version: '1.7.36'
+
+}
+
+test {
+    useTestNG()
+}
